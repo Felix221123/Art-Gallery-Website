@@ -1,0 +1,104 @@
+:root{
+    --fs-big:'Big Shoulders Display', cursive;
+    --fs-outfit:'Outfit', sans-serif;
+    --fw-med:500;
+    --fw-bold:700;
+    --fw-ext-bold:800;
+    --fw-reg:400;
+    --fw-lght:300;
+    --fw-extra-lght:200;
+    --fw-really-extra-lght:100;
+
+    --lght-brown-clr:rgb(213, 150, 108);
+    --black-clr:rgb(21, 21, 21);
+    --lgt-grey-clr:rgb(68, 68, 68);
+    --white-clr:rgb(255, 255, 255);
+}
+
+@import url("location.css");
+
+@media (min-width:750px) {
+
+    section#map{
+        & button.button-to-take-you-back-home{
+            position: absolute;
+            left: clamp(5%, 6%, 10%);
+        }
+
+    }
+    section#location{
+        display: grid;
+        grid-template-columns: 0.4fr 0.6fr;
+        padding: clamp(6rem , 6.5vw, 7rem) 
+        clamp(1.5rem, 1.5vw, 1.6rem) 
+        clamp(6rem , 6.5vw, 7rem)  
+        clamp(2rem, 2.5vw, 2.5rem);
+        column-gap: clamp(1.5rem , 2vw, 2rem);
+
+        & .ourlocation-page-grid{
+            & h1{
+                font-size: clamp(3.4375rem , 3.5rem , 3.5rem);
+            }
+
+        }
+    }
+    footer{
+        & .footers-content-grid{
+            display: grid;
+            grid-template-columns: 0.2fr 0.45fr 0.35fr;
+            column-gap: clamp(2.5rem , 3rem, 4rem);
+            justify-content: flex-start;
+            align-items: flex-start;
+            & .social-media-contents-icons{
+                display: flex;
+                justify-content: end;
+            }
+        }
+    }
+    
+}
+
+@media (min-width:1440px) {
+    section#map{
+        & button.button-to-take-you-back-home{
+            position: absolute;
+            left: clamp(10%, 10.5%, 12%);
+        }
+
+    }
+    section#location{
+        display: flex;
+        padding: clamp(6rem , 6.5vw, 7rem) 
+        clamp(9rem ,14vw,15rem) 
+        clamp(6rem , 6.5vw, 7rem)  
+        clamp(9rem ,14vw,15rem) ;
+        flex-direction: row;
+        justify-content: space-between;
+        column-gap:clamp(40%,40%,48%);
+        
+        & .ourlocation-page-grid{
+            & h1{
+                font-size: clamp(3.4375rem , 3.5rem , 3.5rem);
+                line-height: 3.4375rem;
+            }
+
+        }
+        
+    }
+    footer{
+        display: grid;
+        padding: clamp(4rem , 4.5vw , 4.5rem) 
+        clamp(9rem ,14vw,15rem) ;
+        
+        & .footers-content-grid{
+            display: grid;
+            grid-template-columns: 0.3fr 0.4fr 0.3fr;
+            column-gap: clamp(2.5rem , 3rem, 4rem);
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            
+        }
+    }
+    
+}

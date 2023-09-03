@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&display=swap');
+
+
+:root{
+    --fs-big:'Big Shoulders Display', cursive;
+    --fs-outfit:'Outfit', sans-serif;
+    --fw-med:500;
+    --fw-bold:700;
+    --fw-ext-bold:800;
+    --fw-reg:400;
+    --fw-lght:300;
+    --fw-extra-lght:200;
+    --fw-really-extra-lght:100;
+
+    --lght-brown-clr:rgb(213, 150, 108);
+    --black-clr:rgb(21, 21, 21);
+    --lgt-grey-clr:rgb(68, 68, 68);
+    --white-clr:rgb(255, 255, 255);
+
+}
+
+/* custom css reset */
+html, 
+body{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+img,
+picture,
+video,
+svg{
+    display: block;
+    max-width: 100%;
+}
+
+* , *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+*{
+    font-size: inherit;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* css styling */
+
+html{
+    scroll-behavior: smooth;
+}
+
+section#map{
+    position: relative;
+
+    & button.button-to-take-you-back-home{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: clamp(16.25rem , 16.3vw, 16.3rem);
+        height: clamp(4rem , 4.5vw, 4.5rem);
+        border: none;
+
+        > a{
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 21.5% 78.5%;
+            place-items: center;
+            text-decoration: none;
+            background: linear-gradient(
+                to left,
+                rgb(21, 21, 21) 78.5%,
+                rgb(213, 150, 108) 21.5%
+                
+            );
+
+
+            & p.home-section-text{
+                font-size: clamp(1.25rem, 1.25vw, 1.3rem);
+                font-family: var(--fs-big);
+                font-weight: var(--fw-ext-bold);
+                letter-spacing: 3.64px;
+                text-transform: uppercase;
+                color: var(--white-clr);
+
+                &:hover, :active{
+                    color: var(--white-clr);
+                }
+            }
+
+            &:hover, :active {
+                background: linear-gradient(
+                to left,
+                var(--lght-brown-clr) 78.5%,
+                var(--black-clr) 21.5%);
+                transition: all 0.5s;
+            }
+
+
+        }
+    }
+
+}
+
+section#location{
+    background-color: var(--black-clr);
+    padding: clamp(3rem , 3.5vw, 3.5rem) clamp(0.75rem, 0.75vw, 0.8rem) clamp(3rem , 3.5vw, 3.5rem)  clamp(1rem , 1rem, 1.2vw);
+    display: grid;
+    row-gap: clamp(2rem , 2vw, 2.2rem);
+    & .ourlocation-page-grid{
+        & h1{
+            font-family: var(--fs-big);
+            font-size: clamp(3.125rem, 3.15vw, 3.15rem);
+            font-weight: var(--fw-ext-bold);
+            text-transform:uppercase ;
+            color: var(--white-clr);
+        }
+    }
+
+    & .location-address{
+        display: grid;
+        row-gap: clamp(1.2rem , 1.2vw, 1.3rem);
+        > h2{
+            font-family: var(--fs-big);
+            color: var(--lght-brown-clr);
+            font-weight: var(--fw-ext-bold);
+            font-size: clamp(2rem, 2vw,2.2rem);
+            text-transform: uppercase;
+
+        }
+
+        > .address-postcode{
+            color: var(--white-clr);
+            font-family: var(--fs-outfit);
+            font-size: clamp(1.125rem , 1.15vw, 1.15rem);
+            font-weight: var(--fw-extra-lght);
+            line-height: 1.75rem;
+
+            > .postcode{
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    & p.paragraph-underneath-address{
+        font-family: var(--fs-outfit);
+        font-size: clamp(1.125rem , 1.15vw, 1.15rem);
+        font-weight: var(--fw-extra-lght);
+        color: var(--white-clr);
+        line-height: 1.75rem;
+    }
+}
+
+footer{
+    background-color: var(--lght-brown-clr);
+    display: grid;
+    padding: clamp(3rem , 3.5vw , 4rem) clamp(2rem ,2vw , 2.2rem);
+
+    & .footers-content-grid{
+        display: grid;
+        row-gap: clamp(1.3rem , 1.5vw , 1.5rem);
+
+        & .footers-paragraph-content{
+            color: var(--black-clr);
+            font-family: var(--fs-outfit);
+            font-weight: var(--fw-extra-lght);
+            line-height: 1.625rem;
+            font-size: clamp(1rem , 1vw, 1.1rem);
+        }
+
+        & .social-media-contents-icons{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            column-gap: clamp(1.2rem , 1.3vw, 1.5rem);
+
+            > a{
+                > svg{
+                    fill: black;
+                    >:hover, :active{
+                        cursor: pointer;
+                        fill: white;
+                    }
+                }
+            }
+
+            /* & img.same-style{
+                filter: invert(1) brightness(0);
+
+                &:hover, :active{
+                    transition: all 0.5s;
+                    fill: var(--lght-brown-clr);
+                }
+
+            } */
+        }
+    }
+
+}

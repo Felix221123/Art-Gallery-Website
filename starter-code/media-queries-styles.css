@@ -1,0 +1,270 @@
+:root{
+    --fs-big:'Big Shoulders Display', cursive;
+    --fs-outfit:'Outfit', sans-serif;
+    --fw-med:500;
+    --fw-bold:700;
+    --fw-ext-bold:800;
+    --fw-reg:400;
+    --fw-lght:300;
+    --fw-extra-lght:200;
+    --fw-really-extra-lght:100;
+
+    --lght-brown-clr:rgb(213, 150, 108);
+    --black-clr:rgb(21, 21, 21);
+    --lgt-grey-clr:rgb(68, 68, 68);
+    --white-clr:rgb(255, 255, 255);
+}
+
+
+/* media queries for devices above the width of 750px */
+@media (min-width:750px) {
+    section#home{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+       & .img-for-home-section{
+        & picture{
+            display: block;
+        }
+       } 
+
+       & .heading-with-paragragph-button-for-location{
+        z-index: 999;
+        position: absolute;
+        right: 0;
+        width: clamp(45%, 50%, 55%);
+        row-gap: clamp(2.5rem, 3vw, 3rem);
+
+        & h1{
+            font-size: clamp(4.375rem , 4.4vw, 4.4rem);
+            line-height: 3.75rem;
+        }
+
+        & .paragraph-with-button{
+            row-gap: clamp(2.5rem, 3vw, 3rem);
+        }
+        
+       }
+       .breakline-when-needed{
+        display: block;
+       }
+       .breakline-for-desktop{
+        display: none;
+       }
+    }
+
+    section#overview{
+        padding: 0rem clamp(2rem , 2vw, 2.2rem);
+        & .headings-with-image{
+            display: grid;
+            place-items: center;
+            grid-template-columns: 45% 55%;
+            margin-inline: auto;
+            justify-content: center;
+            row-gap: 0rem;
+            position: relative;
+
+            & .headings-and-paragraph-undearneath{
+                & h2{
+                    padding: 0rem clamp(20%, 40%, 50%) 0rem 0rem;
+                }
+                & p.paragraph-undnearth-heading{
+                    padding: 0rem clamp(20%, 24%, 30%) 0rem 0rem;
+
+                }
+            }
+              
+        }
+
+        & .next-three-blocks-of-image{
+            display: grid;
+            grid-template-columns: 61% 37.5%;
+            column-gap: 1rem;
+            row-gap: 0;
+
+            & picture{
+                width: 100%;
+                height: 100%;
+            }
+            
+            & .next-two-ontop-blocks{
+                display: grid;
+                grid-template-rows: 0.4fr 0.6fr;
+                row-gap: 0rem;
+
+                & .box-container-for-writings{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    padding: clamp(30%, 40%, 50%) clamp(1.3rem, 1.5vw, 1.5rem) 0rem clamp(1.3rem, 1.5vw, 1.5rem);
+                    
+                }
+
+            }
+            
+        }
+    }
+
+    footer#footer-section{
+        & .footers-content-grid{
+            display: grid;
+            grid-template-columns: 0.2fr 0.45fr 0.35fr;
+            column-gap: clamp(2.5rem , 3rem, 4rem);
+            justify-content: flex-start;
+            align-items: flex-start;
+
+
+            & .social-media-contents-icons{
+                display: flex;
+                justify-content: end;
+            }
+        }
+    }
+    
+}
+
+
+/* media queries for devices above the width of 1440px */
+@media (min-width:1439px) {
+    section#home{
+        width: clamp(85%, 88vw, 90%);
+        height: 100%;
+        & .black-background-for-desktop{
+            position: relative;
+            top: 0;
+            left: 0;
+            width: clamp(45rem , 50vw, 50rem);
+            height: clamp(49.9375rem , 50vw, 50rem);
+            background: var(--black-clr);
+        }
+
+        & .img-for-home-section{
+            margin-bottom: 0;
+        }
+
+        & .heading-with-paragragph-button-for-location{
+            position: absolute;
+            top: 22%;
+            display: grid;
+            grid-template-columns: 0.65fr 0.38fr;
+            justify-content: space-around;
+            width: clamp(85%, 86%, 90vw);
+
+            > h1{
+                position: relative;
+                left: 0;
+                background: linear-gradient(
+                    to left,
+                    var(--black-clr) 61%,
+                    var(--white-clr) 39%
+                );
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                font-size: clamp(6rem ,6vw,6.2rem);
+                line-height: 5.5rem;
+                
+            }
+            & .paragraph-with-button{
+                
+                margin-left: clamp(2.5rem, 3vw,3rem);
+                & .home-paragraph-style{
+                    font-size: clamp(1.375rem, 1.4vw,1.4rem);
+                    line-height: 2rem;
+                    padding: 0;
+                }
+                
+            }
+        }
+    }
+
+    section#overview{
+        display: grid;
+        padding: 0rem clamp(10%,12vw,10rem);
+
+        > .headings-with-image{
+            display: grid;
+            grid-template-columns: 0.4fr 0.6fr;
+
+            & .headings-and-paragraph-undearneath{
+                & h2{
+                    font-size: clamp(3.75rem,3.8vw,3.8rem);
+                    line-height: 3.75rem;
+                }
+                & p.paragraph-undnearth-heading{
+                    font-size: clamp(1.375rem,1.38vw,1.38rem);
+                    line-height: 2rem;
+                }
+            }
+        }
+
+        & .next-three-blocks-of-image{
+            display: grid;
+            column-gap: 1.5rem;
+            grid-template-columns: 60.5% 37.5%;
+            & .next-two-ontop-blocks{
+                display: grid;
+                row-gap: 1.5rem;
+                & .box-container-for-writings{
+                    display: grid;
+                    place-items: center;
+                    width: 100%;
+                    height: 100%;
+                    padding: clamp(5rem ,6vw,7rem) clamp(2rem, 2vw,2.5rem);
+                    
+
+                    & p.first-heading-for-box{
+                        font-size: clamp(3.75rem,3.8vw,3.8rem);
+                        line-height:  3.75rem;
+                        padding: 0rem clamp(20%,20%,25%) 0rem 0rem;
+                    }
+
+                    & p.paragraph-under-heading{
+                        font-size: clamp(1.375rem,1.38vw,1.38rem);
+                        line-height: 2rem;
+                    }
+                }
+            }
+        }
+    }
+    .breakline-when-needed{
+        display: none;
+    }
+    footer#footer-section{
+        display: grid;
+        padding: clamp(4rem , 4.5vw , 4.5rem) clamp(10%,12vw,10rem);
+        
+
+        & .footers-content-grid{
+            display: grid;
+            grid-template-columns: 0.28fr 0.42fr 0.3fr;
+
+            > h3{
+                width: 9.973125rem;
+                height: 3.625rem;
+            }
+            & .footers-paragraph-content{
+                font-size: clamp(1.125rem,1.25vw,1.25rem);
+                line-height: 1.625rem;
+            }
+            & .social-media-contents-icons{
+                display: flex;
+                align-items: flex-end;
+                
+                & img.same-style{
+                    
+                    &:hover, :active{
+                        fill: var(--black-clr);
+                        transition: fill ease-in 0.5s;
+                        
+                    }
+    
+                }
+            }
+        }
+    }
+    
+    
+}
